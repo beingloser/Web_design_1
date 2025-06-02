@@ -1,0 +1,123 @@
+/* 留言板 */
+.message_board_title {
+    text-align: center;
+    font-size: 66px;
+}
+
+/* 留言板容器 */
+.message_board_container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message_board_textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #a777e3;
+    font-size: 16px;
+    resize: none;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.message_board_save {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    align-self: flex-end;
+}
+
+.message_board_save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 留言板列表 */
+.message_board_list {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.message_board_items {
+    padding: 0;
+    list-style: none;
+}
+
+.message_board_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.message_board_item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.message_board_item_content {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.message_board_item_content time {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .message_board_container, .message_board_list {
+        width: 95%;
+    }
+    .message_board_title {
+        font-size: 40px;
+    }
+}
+
+/* 保存按钮禁用状态 */
+.message_board_save.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 消息提示动画（淡入淡出） */
+.message_board_message, 
+.message_board_message_error,
+.message_board_message_empty,
+.message_board_message_delete,
+.message_board_message_delete_error,
+.message_board_message_delete_empty {
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: fixed; 
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+.message_board_message.active,
+.message_board_message_error.active,
+.message_board_message_empty.active,
+.message_board_message_delete.active,
+.message_board_message_delete_error.active,
+.message_board_message_delete_empty.active {
+    opacity: 1;
+}

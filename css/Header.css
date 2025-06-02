@@ -1,0 +1,165 @@
+/* 顶部,包括welcome和更多信息 */
+.top {
+	width:100%;
+	height:100px;
+}
+.welcome {
+    position: relative;
+    top:35px;
+    left: 10px;
+    float:left;
+    height: 80px;
+}
+.other_function {
+	float:right;
+	padding-right: 20px;
+	height:100px;
+	text-align:center;
+}
+.other_function>ul>li{
+	float: left;
+	position: relative;
+	top: 60px;
+}
+.other_function>ul>li>a {
+	font-size: 20px;
+	padding-right: 20px;
+    color: #ffffff;
+}
+.other_function ul li a:hover {
+    color: #ffa200;
+    text-shadow: 0 2px 8px #ff670055;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+.other_function ul li a:active {
+    color: #ff5500;
+    transform: scale(0.95);
+    transition: color 0.1s, transform 0.1s;
+}
+
+/* 滚动条,彩蛋 */
+.scroll_bar {
+	margin:0 0 5px auto;
+	width:100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 5px 0;
+}
+
+.scroll_container {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll_container ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    white-space: nowrap;
+}
+
+.scroll_container ul li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    flex-shrink: 0;
+}
+
+.scroll_container ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.scroll_container ul li a:hover {
+    color: #ff6700;
+}
+
+
+/* 轮播图片 */
+.PIC.carousel {
+    position: relative;
+    width: 666px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px #36373733;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 图片样式 */
+.PIC.carousel .carousel-img {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s;
+    border-radius: 18px;
+    z-index: 1;
+}
+.PIC.carousel .carousel-img.active {
+    opacity: 1;
+    z-index: 2;
+}
+/* 按钮样式 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    color: #ffffff8c;
+    font-size: 2.2rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.carousel-btn:hover {
+    color:#ffffff;
+}
+.carousel-btn.prev { left: 0px; }
+.carousel-btn.next { right: 0px; }
+.carousel-status {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+}
+.carousel-status .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff8c;
+    transition: background 0.3s, border 0.3s;
+    cursor: pointer;
+}
+.carousel-status .dot.active {
+    background: #ffffff;
+}
+.hr1 {
+    border: none;
+    height: 4px;
+    background: linear-gradient(90deg,#cbffc880 0%, #cbffc8 50%, #cbffc880 100%);
+    margin: 32px 0 24px 0;
+    border-radius: 2px;
+}

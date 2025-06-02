@@ -1,0 +1,116 @@
+.musicWall_title {
+    text-align: center;
+    font-size: 66px;
+}
+.musicWall_container {
+    display: block;
+    min-height: 1200px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.music-list {
+    width: 100%;
+    max-height: calc(100vh - 10px);
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.music-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.music-item:hover {
+    transform: translateY(-2px);
+    background-color: rgb(186, 241, 185);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.music-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.music-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.music-time {
+    font-size: 14px;
+    color: #666;
+}
+
+.audio-player {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+}
+
+.delete-btn:hover {
+    background-color: #ff5252;
+}
+
+.music-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+#add-music-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+#add-music-btn:hover {
+    background-color: #45a049;
+}
+
+.music-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.music-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.music-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.music-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

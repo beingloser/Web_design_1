@@ -1,0 +1,364 @@
+.Main_Content {
+	width:100%;
+    height: 2100px;
+    margin-top:10px ;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration:none;
+    font-size:20px;
+	color:black;
+}
+
+/* 横向滚动条 */
+.scrollBar {
+    width: 100%;
+    height: 56px;
+    background: transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 18px auto;
+}
+
+.scrollBar-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255,255,255,0.18);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.scrollBar-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px; /* 根据实际需要调整 */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    z-index: 2;
+    background: linear-gradient(
+        to right,
+        rgba(171, 170, 170, 0.95) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #0002;
+    flex-shrink: 0;
+    pointer-events: none; /* 允许li穿透 */
+    padding-left: 18px;
+}
+
+.scrollBar-list {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+    transition: none;
+    will-change: transform;
+}
+
+.scrollBar-list li {
+    color: #ffffff7b;
+    font-size: 18px;
+    opacity: 0.92;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.10);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0001;
+}
+.scrollBar-list li:hover {
+    background: rgba(255,255,255,0.18);
+    color: #ffffff;
+}
+
+
+.Showing {
+    margin-top: 20px;
+	width:100%;
+	height:700px;
+}
+/* 展示区域1,包括视频,信息框 */
+.showing1 {
+    display: flex;
+	height:500px;
+    gap: 20px;
+}
+.showing1-left {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    height: 100%;
+    gap: 20px;
+}
+.video_container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.721);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #0002;
+    border: 1.5px solid rgba(255,255,255,0.721);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 240px;
+}
+.video_container video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 12px;
+    background: transparent;
+    display: block;
+}
+
+/* message2的信息栏 */
+.message2 {
+    width: 100%;
+    height: 240px;
+    background: rgba(216, 246, 225, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border: 1.5px solid rgba(216, 246, 225, 0.28);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.message2_bar_title {
+    text-align: center;
+}
+.message2 li {
+    list-style-type:disc;
+}
+.message2 li a:hover {
+    color: rgb(255, 255, 255);
+}
+/* message1的信息栏 */
+.message1 {
+    flex: 1;
+    background: rgba(255,255,255,0.35);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+    border: 1.5px solid rgba(255,255,255,0.28);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    min-width: 220px;
+    height: 100%;
+}
+
+.message1_bar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: rgba(255,255,255,0.35);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 16px 0 rgba(31,38,135,0.08);
+    border-bottom: 1.5px solid rgba(255,255,255,0.18);
+}
+
+.message1_bar .tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    color: #000000;
+    font-size: 25px;
+    transition: background 0.3s, color 0.3s;
+    width: 25%;
+}
+
+.message1_bar .tab.active,
+.message1_bar .tab:hover {
+    background: #ffffff80;
+    color: #ffffff;
+}
+
+.message1_content {
+    padding: 20px 24px;
+    background: transparent;
+}
+
+.message1_content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.message1_content li {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 12px;
+    cursor: pointer;
+    padding: 6px 0;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.message1_content li:hover {
+    background: #e0f7fa;
+}
+.message1_more{
+    text-align: right;
+    margin-top: 17px;
+    color: #000000;
+    width: 50%;
+}
+.message1_more a {
+    font-size: 15px;
+}
+.message1_more a:hover {
+    color: #ffffff;
+}
+
+
+/* showing2的导航栏 */
+.showing2 {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    height: 1500px;
+}
+
+/* function导航栏区域 */
+.menu {
+    margin: 20px auto;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(135deg, #ffffff47, #7575758a);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.function_bar {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.function_bar li {
+    width: 120px;
+    height: 50px;
+    transition: all 0.4s ease 0s;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
+
+.function_bar li.active {
+    transform: rotateX(-90deg);
+}
+
+.function_bar li:hover:not(.active) {
+    transform: rotateX(-90deg);
+}
+
+.menu_fun {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.no1 {
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateZ(25px);
+}
+
+.no2 {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+/* 为每个功能项添加不同的悬停颜色 */
+.function1:hover .no2 {
+    background: #efbed3;
+}
+.function2:hover .no2 {
+    background: #adf4f5;
+}
+.function3:hover .no2 {
+    background: #eff0a5;
+}
+.function4:hover .no2 {
+    background: #b6f7a7;
+}
+
+.menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff74;
+    border: 1.5px solid rgba(155, 240, 169, 0.28);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+.submenu-container {
+    /* submenu-container填充剩余空间 */
+    flex: 1;
+    position: relative;
+    width: 100%;
+    overflow: auto; /* 内容过多时可滚动 */
+}
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    background: rgba(155, 240, 169, 0.35);
+}
+.submenu.active {
+    display: block;
+}
+
+

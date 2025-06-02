@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>主页面</title>
+		<link rel="stylesheet" href="css/Header.css">
+		<link rel="stylesheet" href="css/Main Content.css">
+		<link rel="stylesheet" href="css/Footer.css">
+		<link rel="stylesheet" href="css/MusicWall.css">
+		<link rel="stylesheet" href="css/Time.css">
+		<link rel="stylesheet" href="css/MessageBoard.css">
+		<link rel="stylesheet" href="css/PhotoWall.css">
+		<link rel="stylesheet" href="css/TimeEgg.css">
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			min-height: 100vh;
+		}
+		.ALL {
+			height:100%;
+			width:1000px;
+			margin-left: 20px;
+		}
+
+		.background-video {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+			opacity: 0.9; 
+			transition: opacity 0.5s ease-in-out;
+		}	
+		</style>
+	</head>
+	<body>
+	<video class="background-video" autoplay muted loop>
+        <source src="video/The Last of Us HDR.mp4" type="video/mp4">
+    </video>
+	<div class="ALL">
+		<div class="Header">
+			<div class="top">
+				<img class="welcome" src="img\线条小狗1.gif" alt="欢迎动画">
+				<div class="other_function">
+					<ul>
+						<li><a href="#" class="mydata">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">帮助</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="scroll_bar">
+				<div class="scroll_container">
+					<ul>
+						<li><a href="#">-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~</a></li>
+						<li><a href="#">-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="PIC carousel">
+				<button class="carousel-btn prev">&lt;</button>
+				<img src="img/preview1.jpg" alt="preview1" class="carousel-img">
+				<img src="img/preview2.jpg" alt="preview2" class="carousel-img">
+				<img src="img/preview3.jpg" alt="preview3" class="carousel-img">
+				<img src="img/preview4.jpg" alt="preview4" class="carousel-img">
+				<img src="img/preview5.jpg" alt="preview5" class="carousel-img">
+				<button class="carousel-btn next">&gt;</button>
+				<div class="carousel-status">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</div>
+			<hr class="hr1">
+		</div>
+		<div class="Main_Content">
+			<div class="scrollBar">
+				<div class="scrollBar-container">
+					<span class="scrollBar-title" id="scrollBarTitle">公告栏</span>
+					<ul class="scrollBar-list">
+						<li>	稍息！🧍  军体拳！✊✊  格斗准备！✊😡👊杀！杀！杀！ 弓步出拳！😡🦵👊杀！  穿喉弹踢！🫴😡🦶杀！  马步横打！🤛😡🦵杀！  内搏下勾！✊😡🦵杀！  交错侧踹！💪😡🦵🤜杀！  外格横勾！🤛😡🦵杀！  反击勾踢！🚶♀🚶♂🚶杀！  转身别臂！🖐😡🫲🔄杀！  虚步砍肋！🤲😡🦶杀！  弹裆顶肘！🦶😡💪杀！  反弹侧击！👊😡🤚👊杀！  弓步靠掌！👐😡🦵杀！  上步砸肘！💪😡🦵杀！  仆步撩裆！🤌😡🫴杀！  挡投出击拌腿！👊😡杀！ 🫲😡杀！ 🖐😡杀！ 击腰锁喉！👊😡杀！🫶😡杀！杀！</li>
+					</ul>
+				</div>
+			</div>
+			<div class="Showing">
+				<div class="showing1">
+					<div class="showing1-left">
+						<div class="video_container">
+							<video src="video/孤高曼波.mp4" class="video1" controls></video>
+						</div>
+						<div class="message2">
+							<div class="message2_bar_title">功能栏</div>
+							<ul class="message2_bar">
+								<li><a href="#">天羽屠龙舞ヽ(‘⌒´メ)ノ</a></li>
+								<li><a href="#">流影电光闪(｀･∧･´)</a></li>
+								<li><a href="#">古锭酒火杀&lt;(｀^´)&gt;</a></li>
+								<li><a href="#">封尘绝念斩(╯&gt;д&lt;)╯</a></li>
+								<li><a href="#">必胜登龙剑ᕦ(ò_óˇ)ᕤ</a></li>
+								<li><a href="#">龙皇异次元 (̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="message1">
+						<div class="message1_header">
+							<ul class="message1_bar">
+								<li class="tab" data-tab="tab1"><a>疯狂星期四</a></li>
+								<li class="tab" data-tab="tab2"><a>毒鸡汤</a></li>
+								
+								<li class="message1_more"><a href="#">more&gt;&gt;</a></li>
+							</ul>
+						</div>
+						<div class="message1_content tab1">
+							<ul>
+								<li>我承认你有几分姿色，如果我三十岁会离了婚娶你，如果我二十几岁会分了手爱你，如果我十几岁会奋不顾身的找你，可是我才有七岁，这次肯德基疯狂星期四，可以请我吃吗？</li>
+								<li>科学研究表明：人一但有了爱情，智商情商都会提高95% ，烦恼也会消失95%。但问题来了 爱情从哪里来？ 科学家却不肯说，只留下了一串奇怪的符号：KFC Crazy Thursday V me 50</li>
+								<li>真的止不住 眼泪流了一晚都止不住 只要一想起和你在一起的美好时光 就很后悔当初没有好好珍惜你 如果可以再来一次的话…… 算了，不是所有事情都可以重来的 每次想到这里， 眼泪就不争气地从嘴角流下来 今天肯德基疯狂星期四 谁请我吃？</li>
+								<li>世上77亿人，有253亿只鸡，是人数量三倍。如果鸡与人类开战，你必须要对抗3只鸡，就算它死了，又会有同类补上，就算你一个朋友都没有，你还有三只鸡做敌。今天是肯德基疯狂星期四，V我50，我帮你杀敌.</li>
+							</ul>
+						</div>
+						<div class="message1_content tab2">
+							<ul>
+								<li>那些人人羡慕的精英，其实过得并不如你想象的那样好，但肯定比你是强得多。</li>
+								<li>你承受的苦难并不比他人多太多，痛苦主要来自敏感和脆弱。</li>
+								<li>总有这样的人，该干活的时候职业不起来，玩的时候又放不开。</li>
+								<li>人生就是这样，有欢笑也有泪水。一部分人主要负责欢笑，另一部分人主要负责泪水。</li>
+								<li>“不去努力然后告诉自己我根本就不想要”的痛苦，比“拼命努力后失败”的痛苦，要小得多。</li>
+								<li>精神追求，应当是物质追求得到满足后的自然反应，而不是在现实受挫后去寻求的安慰剂。</li>
+								<li>信赖就像一张纸，皱了，即便抚平，也恢复不了原样了。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="showing2">
+					<div class="menu-container">
+						<div class="menu">
+							<ul class="function_bar">
+								<li class="main function1" data-function="function1">
+									<a class="menu_fun no1" href="#">时间</a>
+									<a class="menu_fun no2" href="#">时间</a>
+								</li>
+								<li class="main function2" data-function="function2">
+									<a class="menu_fun no1" href="#">留言板</a>
+									<a class="menu_fun no2" href="#">留言板</a>
+								</li>
+								<li class="main function3" data-function="function3">
+									<a class="menu_fun no1" href="#">音乐墙</a>
+									<a class="menu_fun no2" href="#">音乐墙</a>
+								</li>
+								<li class="main function4" data-function="function4">
+									<a class="menu_fun no1" href="#">画展</a>
+									<a class="menu_fun no2" href="#">画展</a>
+								</li>
+							</ul>
+						</div>
+						<div class="submenu-container">
+							<div class="submenu function1" data-content="function1">
+								<div class="time_title">时间</div>
+								<div id="big-roulette"></div>
+								<div id="egg-roulette"></div>
+								<video class="time_video" id="timeVideo" loop>
+									<source src="video/crucified.mp4" type="video/mp4">
+								</video>
+							</div>
+							
+							<div class="submenu function2" data-content="function2">
+								<div class="message_board_title">留言板</div>
+								<div class="message_board_container">
+									<textarea class="message_board_textarea" placeholder="在这里写下你的留言..." aria-label="输入留言内容"></textarea>
+									<button class="message_board_save" aria-label="保存留言">保存</button>
+								</div>
+								<div class="message_board_list">
+									<ul class="message_board_items"></ul>
+								</div>
+							</div>
+
+							<div class="submenu function3" data-content="function3">
+								<div class="musicWall_title">音乐墙</div>
+								<div class="musicWall_container">
+									<div class="music-controls">
+										<input type="file" id="audio-upload" accept="audio/*" multiple style="display: none;">
+										<button id="add-music-btn">添加音乐</button>
+									</div>
+									<div class="music-list" id="music-list"></div>
+								</div>
+							</div>
+
+							<div class="submenu function4" data-content="function4">
+								<div class="photo_wall_title">画展</div>
+								<div class="photo_wall_container">
+									<div class="photo-controls">
+										<input type="file" id="photo-upload" accept="image/*" multiple style="display: none;">
+										<button id="add-photo-btn">添加照片</button>
+									</div>
+									<div class="photo-wall" id="photo-wall">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Footer">
+			<div class="footer_content">
+				<div class="footer_text">
+					<dl>
+						<dt class="dt_moreinf">更多信息</dt>
+						<dd>© 2025 主页面 版权所有</dd>
+						<dd>地址：河南省开封市河南大学</dd>
+						<dd>姓名:潘景豪</dd>
+						<dd>学号:2410250248</dd>
+						<dd>专业:软件工程</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/Main Content.js"></script>
+	<script src="js/Header.js"></script>
+	<script src="js/MusicWall.js"></script>
+	<script src="js/Time.js"></script>
+	<script src="js/MessageBoard.js"></script>
+	<script src="js/PhotoWall.js"></script>
+	<script src="js/TimeEgg.js"></script>
+	</body>
+</html>
